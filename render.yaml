@@ -2,8 +2,9 @@ services:
   - type: web
     name: flask-predict-app
     env: python
-    buildCommand: ""
-    startCommand: "python app.py"
+    region: oregon  # hoặc changeme nếu bạn muốn khu vực khác
+    buildCommand: pip install -r requirements.txt
+    startCommand: python test.py
     envVars:
       - key: PYTHON_VERSION
         value: 3.10

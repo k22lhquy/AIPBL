@@ -52,6 +52,7 @@ thresholds = {
 }
 
 def predict_image(input_image):
+    print(input_image)
     try:
         print("📥 Nhận input:", input_image[:100])  # In 100 ký tự đầu
         img = None

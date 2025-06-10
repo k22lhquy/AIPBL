@@ -108,6 +108,11 @@ def predict_image(input_image):
         raise ValueError(f"Lỗi xử lý ảnh: {str(e)}")
 
 
+@app.route('/', methods=['GET', 'HEAD'])
+def home():
+    return jsonify({"message": "API server đang chạy. Gửi POST /predict để dự đoán."})
+
+
 @app.route('/predict', methods=['POST'])
 def predict():
     try:

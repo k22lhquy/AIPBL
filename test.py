@@ -23,12 +23,12 @@ class Cast(Layer):
 def download_model_if_needed():
     model_path = 'resnet.h5'
     if not os.path.exists(model_path):
-        print("🔽 Downloading model from Google Drive...")
+        print("Downloading model from Google Drive...")
         file_id = '122bsDkj6wzqK6KKSyDq5D7vrJ25KxSH6'
         gdown.download(f"https://drive.google.com/uc?id={file_id}", model_path, quiet=False)
-        print("✅ Model downloaded.")
+        print("Model downloaded.")
     else:
-        print("✅ Model already exists, no need to download.")
+        print("Model already exists, no need to download.")
 
 # ====== Load model ======
 download_model_if_needed()
